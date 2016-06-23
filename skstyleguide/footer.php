@@ -11,7 +11,7 @@
 				var ajax_url = '<?php bloginfo( 'url' ); ?>/wp-admin/admin-ajax.php';
 		</script>
 
-		<script src="<?php bloginfo( 'template_directory' ) ;?>/dist/js/app<?php if( PRODUCTION_MODE ): echo '.min'; endif; ?>.js"></script>
+		<script src="<?php bloginfo( 'template_directory' ) ;?>/dist/js/app.js"></script>
 
 		<?php wp_footer(); ?>
 	</body>

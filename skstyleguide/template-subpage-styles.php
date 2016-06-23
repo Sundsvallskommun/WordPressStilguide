@@ -30,6 +30,7 @@ if ($subpage) {
 
       $image_text = get_field("text_vid_bild", $subpage->ID);
       $image = get_field("bild", $subpage->ID);
+      $image_mobile = get_field("bild_mobilversion", $subpage->ID);
       $file = get_field("ladda_ner_fil", $subpage->ID);
 
     ?>
@@ -46,9 +47,17 @@ if ($subpage) {
         <?php endif; ?>
 
         <?php if ($image) : ?>
-          <div class="col-md-<?php echo $image_cols; ?> style-image">
-            <img src="<?php echo $image['url']; ?>" />
-          </div>
+            <?php if ($image_mobile) : // Show both mobile and desktop version of image ?>
+                <div class="col-md-<?php echo $image_cols; ?> style-image">
+                    <img src="<?php echo $image['url']; ?>" class="image-only-desktop" />
+                    <img src="<?php echo $image_mobile['url']; ?>" class="image-only-mobile" />
+                </div>
+            <?php else : ?>
+                <div class="col-md-<?php echo $image_cols; ?> style-image">
+                    <img src="<?php echo $image['url']; ?>" />
+                </div>
+            <?php endif; ?>
+
         <?php endif; ?>
     </div>
 

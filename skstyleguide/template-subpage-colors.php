@@ -34,19 +34,19 @@ if ($subpage) {
     ?>
 
 
-    <div class="row">
+    <div class="style-row">
         <?php if ($fargskala) : ?>
             <?php foreach ($fargskala as $this_color) : ?>
-                <div class="style-color-collection row">
+                <div class="style-color-collection style-row">
                     <?php for ($fargnummer = 1; $fargnummer < 4; $fargnummer++) : ?>
-                        <div class="style-color row">
-                            <div class="col-md-3 style-color-text">
+                        <div class="style-color style-row">
+                            <div class="style-color-text">
                                 <?php $fieldname = "beskrivning_farg_".$fargnummer; ?>
                                 <?php echo $this_color[$fieldname]; ?><br>
                             </div>
 
                             <?php $fieldname = "fargkod_farg_".$fargnummer; ?>
-                            <div class="col-md-9 style-color-bar" style="background-color: <?php echo $this_color[$fieldname]; ?>;">
+                            <div class="style-color-bar" style="background-color: <?php echo $this_color[$fieldname]; ?>;">
                             </div>
                         </div>
                     <?php endfor; ?>

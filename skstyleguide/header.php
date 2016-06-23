@@ -36,7 +36,12 @@
 
 <?php require_once( dirname( __FILE__ ) . '/dist/images/icons.svg' ); ?>
 
-<header role="banner">
+<header role="banner" class="mobile-header">
+	<div id="mobile-menu-icons">
+		<div id="menu-closed"><img src="<?php bloginfo( 'template_directory' ); ?>/dist/images/icons/menu.svg" alt="Meny" id="menu-icon" /></div>
+		<div id="menu-open"><img src="<?php bloginfo( 'template_directory' ); ?>/dist/images/icons/menu-close.svg" alt="Stäng meny" id="menu-icon-close" /></div>
+	</div>
+	<a href="/"><img src="<?php bloginfo( 'template_directory' ); ?>/dist/images/skstyleguide/sundsvall_logo_large.svg" alt="Sundsvalls kommun" id="logo" /></a>
 </header>
 
 <main role="main">

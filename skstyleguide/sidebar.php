@@ -1,11 +1,17 @@
 <aside class="sidebar">
-	<a href="/"><img src="<?php bloginfo( 'template_directory' ); ?>/dist/images/skstyleguide/sundsvall_logo_large.svg" alt="Sundsvalls kommun" id="logo" /></a>
-	<div id="tagline">Digitalt identitetsverktyg</div>
+	<div id="desktop-only">
+		<a href="/"><img src="<?php bloginfo( 'template_directory' ); ?>/dist/images/skstyleguide/sundsvall_logo_large.svg" alt="Sundsvalls kommun" id="logo" /></a>
+		<div id="tagline">Digitalt identitetsverktyg</div>
+	</div>
 
 	<?php //wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 
 	<?php
-		global $original_post;
+		global $original_post, $post;
+
+		if (!$original_post) {
+			$original_post = $post;
+		}
 
 		$menu = wp_get_nav_menu_items( "Menu 1" );
 	?>
@@ -34,7 +40,7 @@
 				<?php if ($subpages) : ?>
 					<ul>
 						<?php foreach ( $subpages as $subpage ) : ?>
-							<li><a href="#<?php echo $subpage->post_name; ?>"><?php echo $subpage->post_title; ?></a></li>
+							<li class="subpage-menu-item"><a href="#<?php echo $subpage->post_name; ?>"><?php echo $subpage->post_title; ?></a></li>
 						<?php endforeach; ?>
 					</ul>
 				<?php endif; ?>

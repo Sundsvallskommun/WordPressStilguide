@@ -32,10 +32,10 @@
     <br /><h4>Våra typsnitt</h4>
     <div class="row">
         <div class="style-fonts container">
-            <div class="col-md-4 style-font-item item style-font-example" id="font-raleway">
+            <div class="style-font-item item style-font-example" id="font-raleway">
                 Raleway
             </div>
-            <div class="col-md-4 style-font-item item style-font-example" id="font-source-sans">
+            <div class="style-font-item item style-font-example" id="font-source-sans">
                 Source sans
             </div>
         </div>
