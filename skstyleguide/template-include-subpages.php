@@ -17,7 +17,7 @@ global $post, $subpage;
 
       <?php while ( have_posts() ) : the_post(); ?>
         <h1><?php the_title(); ?></h1>
-        <!-- <div class="last-change">Senast ändrad <?php echo date ("Y-m-d", strtotime($post->post_modified)); ?></div> -->
+        <div class="last-change">Senast ändrad <?php echo date ("Y-m-d", strtotime($post->post_modified)); ?></div>
         <?php the_content(); ?>
       <?php endwhile; // end of the loop. ?>
 
